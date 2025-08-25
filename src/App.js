@@ -1,4 +1,0 @@
-
-function App(body , router){
-    
-}
