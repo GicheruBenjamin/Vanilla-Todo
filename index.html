@@ -1,11 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo App — Functional Store (No Classes)</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <script type="module" src=""></script>
+  <main class="container">
+    <header class="header">
+      <h1>Todo App</h1>
+      <p class="muted">Functional store • localStorage persistence • no frameworks</p>
+    </header>
+
+    <section class="card">
+      <div class="row inputs">
+        <input id="new-todo" type="text" placeholder="What needs doing?" autocomplete="off" />
+        <button id="add-btn" class="primary">Add</button>
+      </div>
+
+      <div class="row actions">
+        <button id="seed" title="Seed sample todos">Seed</button>
+        <button id="clear" class="danger" title="Remove all todos">Clear</button>
+        <button id="toggle-all" title="Toggle all complete">Toggle All</button>
+      </div>
+
+      <table class="todos">
+        <thead>
+          <tr><th style="width:60px">ID</th><th>Task</th><th style="width:120px">Status</th><th style="width:160px">Actions</th></tr>
+        </thead>
+        <tbody id="todos-body"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h3>Events</h3>
+      <div id="events" class="log" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
